@@ -193,7 +193,7 @@ Ya que JavaScript te deja crear objetos cuando quieras sin incorporar la arquite
 
 Para hacerlo más obvio cuáles argumentos espera la función, se puede usar la sintaxis de ES2015/ES6: 'destructuración'. Esta sintaxis tiene varias ventajas:
 
-1. Cuando alguien se fija en el firme de la función, es inmediatamente claro cuáles argumentos se usan.
+1. Cuando alguien se fija en la firma de la función, es inmediatamente claro cuáles argumentos se usan.
 2. Destructurar también copia los valores específicos y primitivos del objeto argumento que se le pasa a la función. Esto puede evitar los efectos extras. Ojo: objetos y arreglos que se destructuran del objeto argumento NO se copian.
 3. Los 'linters' te pueden avisar cuales argumentos / propiedades no se usan, lo cual sería imposible sin destructurar.
 
@@ -343,11 +343,11 @@ function parseBetterJSAlternative(code) {
 **[⬆ vuelve hasta arriba](#contenido)**
 
 ### Eliminar el código duplicado 
-Haz tanto como puedas para evitar código duplicado. El código duplicado es malo ya que significa que hay varios lugares donde hay que actualizar algo si un cambio es necesario en tu lógico.
+Haz tanto como puedas para evitar código duplicado. El código duplicado es malo ya que significa que hay varios lugares donde hay que actualizar algo si un cambio es necesario en tu lógica.
 
 Imagínate que estás en un restaurante y necesitas organizar tu inventario: todos tus tomates, cebolla, pimientos y tal. Si tienes varias listas donde organizas el inventario, cada lista se tendrá que actualizar en cuanto se baja tu inventario. En cambio, si logras tener una sola lista, solo se actualizará en un lugar a la hora de apuntar el inventario.
 
-Muchas veces tienes código duplicado se debe al hecho de tener dos o más cosas semejantes. Estos archivos pueden comparten varias cosas, pero sus diferencias te obligan separarlos para tener dos o más funciones que hacen cosas muy similares. Remover el código duplicado significa que se puede hacer la misma cosa que un solo función/módulo/clase.
+Muchas veces tienes código duplicado ya que se debe al hecho de tener dos o más cosas semejantes. Estos archivos pueden compartir varias cosas, pero sus diferencias te obligan a separarlos para tener dos o más funciones que hacen cosas muy similares. Eliminar el código duplicado significa crear una abstracción que pueda manejar este conjunto de cosas diferentes con una sola función, módulo o clase.
 
 Obtener la abstracción correcta es crítica y por eso debes de adherir a los principios de SOLID que se explican en la sección de Clases. Las malas abstracciones pueden ser aún peores que el código duplicado, ¡así que ten cuidado! Es decir, si puedes hacer una buena abstracción, ¡hazla! No te repitas, si no te darás cuenta de que andas actualizando mucho código en varios lugares a la hora de implementar un cambio.
 
@@ -455,8 +455,8 @@ createMenu(menuConfig);
 ```
 **[⬆ vuelve hasta arriba](#contenido)**
 
-### No utilices 'marcadores' como parámetros de las funciones
-Los marcadores existen para decirle a tu usuario que esta función hace más que una sola cosa. 
+### No utilices 'banderas' como parámetros de las funciones
+Las banderas existen para decirle a tu usuario que esta función hace más que una sola cosa. 
 Como se ha mencionado antes las funciones deben hacer una sola cosa. 
 Divide tus funciones en varias funciones más pequeñas si se adhieren a distintos métodos basados en un booleano. 
 
